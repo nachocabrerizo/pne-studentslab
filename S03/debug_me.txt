@@ -1,2 +1,2 @@
 When printing Result 2, as the values of c and d are the same, the substract of 3 - 3 = 0, so in t3 (t3 = 2 * (t0 / t1)) we are dividing
-by 0 because t1 is 0. The error is in line 8 of code. That is why the program exits ZeroDivisionError
+by 0 because t1 is 0. The error is in line 8 of code. That is why the program exits ZeroDivisionError.
