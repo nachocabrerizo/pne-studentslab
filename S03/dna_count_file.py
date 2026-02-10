@@ -20,12 +20,8 @@ for sequence in lines:
     sequence = sequence.strip() #Remove spaces and newline characters at the end of the string
     total_number += len(sequence)
 
+    result = count_bases(sequence)
+
 print("Total number of bases:", total_number)
 
 
-for base in sequence:
-    if base in bases:
-        bases[base]+= 1
-
-for base, count in bases.items():
-    print(f'{base}: {count}')
