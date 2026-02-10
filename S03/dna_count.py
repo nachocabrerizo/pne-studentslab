@@ -1,5 +1,3 @@
-dna = input("Please input a DNA sequence: ")
-
 def dnafnctn(seq):
     A = 0
     C = 0
@@ -21,21 +19,22 @@ def dnafnctn(seq):
     return A,C,G,T
 
 
-(dnafnctn(dna))
 
-print("")
-
-print("The total length of the dna sequence is:", len(dna))
-
-print("")
 
 bases = {"A":0, "C":0, "G":0, "T":0}
-for base in dna:
-    if base in bases:
-        bases[base]+= 1
-print(bases)
 
-print("")
+def count_bases(sequence):
+    for base in dna:
+        if base in bases:
+            bases[base]+= 1
+    return bases
+
+
+if __name__ == "__main__":
+    dna = input("Please input a DNA sequence: ")
+    print("The total length of the dna sequence is:", len(dna))
+
+    result = count_bases(dna)
 
 for base, count in bases.items():
     print(f'{base}: {count}')
