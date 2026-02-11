@@ -24,17 +24,17 @@ def dnafnctn(seq):
 bases = {"A":0, "C":0, "G":0, "T":0}
 
 def count_bases(sequence):
-    for base in dna:
+    bases = {"A": 0, "C": 0, "G": 0, "T": 0}
+    for base in sequence:
         if base in bases:
             bases[base]+= 1
     return bases
 
-
 if __name__ == "__main__":
-    dna = input("Please input a DNA sequence: ")
-    print("The total length of the dna sequence is:", len(dna))
+    sequence = input("Please input a DNA sequence: ")
+    print("The total length of the dna sequence is:", len(sequence))
 
-    result = count_bases(dna)
+    result = count_bases(sequence)
 
-for base, count in bases.items():
-    print(f'{base}: {count}')
+    for base, count in result.items():
+        print(f'{base}: {count}')
