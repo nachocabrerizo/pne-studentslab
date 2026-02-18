@@ -10,5 +10,5 @@ file_contents = Path(FILENAME).read_text()
 
 lines = file_contents.split("\n")
 
-for content in lines[1:]:
+for content in lines[1:2]:
     print(content)
