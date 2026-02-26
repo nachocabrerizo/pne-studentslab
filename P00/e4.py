@@ -17,7 +17,6 @@ resultsADA = seq_count_base(geneADA)
 resultsFRAT1 = seq_count_base(geneFRAT1)
 resultsFXN = seq_count_base(geneFXN)
 
-print("EX 4:")
 gene_names = ["U5", "ADA", "FRAT1", "FXN"]
 results = [resultsU5, resultsADA, resultsFRAT1, resultsFXN]
 
