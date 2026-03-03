@@ -30,14 +30,7 @@ def seq_printer_4(counts):
         print(f"  {bases[i]}: {counts[i]}")
 
 def seq_count(seq):
-    base_counter = {}
-    for ch in seq:
-        if ch in "ACGT":
-            if ch in base_counter:
-                base_counter[ch] += 1
-            else:
-                base_counter[ch] = 1
-    return base_counter
+    return {base: seq.count(base) for base in "ACGT"}
 
 
 def seq_reverse(seq, n):
