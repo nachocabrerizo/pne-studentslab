@@ -75,6 +75,7 @@ class Seq:
             lines = file.read().splitlines()
         del lines[0]
         self.strbases = "".join(lines)
+        return self.strbases
 
     def most_common_base(self):
         total_count = {"A": 0, "G": 0, "C": 0, "T": 0}
