@@ -1,0 +1,14 @@
+Request Line: GET /hello HTTP/1.1
+
+Resource (Path): /hello
+
+Request Line: GET /file.html HTTP/1.1
+
+Resource (Path): /file.html
+
+Request Line: GET /hi/there?name=virus&type=corona HTTP/1.1
+
+Resource (Path): /hi/there
+
+To access the /dna/u5 resource on your local server running on port 8080, you would use the following URL:
+http://127.0.0.1:8080/dna/u5
