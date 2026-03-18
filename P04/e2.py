@@ -1,6 +1,6 @@
 import socket
 import termcolor
-
+from pathlib import Path
 
 # -- Server network parameters
 IP = "127.0.0.1"
@@ -19,6 +19,8 @@ def process_client(s):
 
     # -- The request line is the first
     req_line = lines[0]
+    parts = req_line.split(" ")
+    path = parts[1]
 
     print("Request line: ", end="")
     termcolor.cprint(req_line, "green")
@@ -31,19 +33,16 @@ def process_client(s):
     # Body (content to send)
 
     # This new contents are written in HTML language
-    body = """
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <title>Green server</title>
-      </head>
-      <body style="background-color: green;">
-        <h1>GREEN SERVER</h1>
-        <p>I am the Green Server! :-)</p>
-      </body>
-    </html>
-    """
+    if path == "/info/A":
+        FILENAME = "html/info/A.html"
+    else:
+        FILENAME =""
+
+
+    body = Path(FILENAME).read_text()
+
+
+
     # -- Status line: We respond that everything is ok (200 code)
     status_line = "HTTP/1.1 200 OK\n"
 
