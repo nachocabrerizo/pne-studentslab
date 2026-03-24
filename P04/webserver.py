@@ -1,4 +1,3 @@
-
 import socket
 import termcolor
 from pathlib import Path
@@ -42,7 +41,7 @@ def process_client(s):
         FILENAME = "html/info/G.html"
     elif path == "/info/T":
         FILENAME = "html/info/T.html"
-    elif path == "/index":
+    elif path == "/":
         FILENAME = "html/info/index.html"
     else:
         FILENAME ="html/info/error.html"
